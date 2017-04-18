@@ -1,7 +1,5 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <title>Code coverage report for node-npmtest-continuation-local-storage/continuation-local-storage/context.js</title>
+<html lang="en"><head>
+    <title>Code coverage report for node-npmtest-continuation-local-storage/node_modules/continuation-local-storage/context.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -194,7 +192,7 @@
     <h1 style="font-weight: bold;">
         <a href="https://github.com/npmtest/node-npmtest-continuation-local-storage">npmtest-continuation-local-storage (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-continuation-local-storage/continuation-local-storage/context.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-continuation-local-storage/node_modules/continuation-local-storage/context.js</span></h1>
     <h2>
         
         Statements: <span class="metric">24.14% <small>(28 / 116)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -210,11 +208,11 @@
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-continuation-local-storage/continuation-local-storage/</a> &#187; context.js</div>
+    <div class="path"><a href="../../../index.html">All files</a> » <a href="index.html">node-npmtest-continuation-local-storage/node_modules/continuation-local-storage/</a> » context.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tr><td class="line-count">1
+<tbody><tr><td class="line-count">1
 2
 3
 4
@@ -654,146 +652,146 @@ var CONTEXTS_SYMBOL = 'cls@contexts';
 var ERROR_SYMBOL = 'error@context';
 &nbsp;
 // load polyfill if native support is unavailable
-<span class="missing-if-branch" title="else path not taken" >E</span>if (!process.addAsyncListener) require('async-listener');
+<span class="missing-if-branch" title="else path not taken">E</span>if (!process.addAsyncListener) require('async-listener');
 &nbsp;
-<span class="fstat-no" title="function not covered" >function Namespace(name) {</span>
-<span class="cstat-no" title="statement not covered" >  this.name   = name;</span>
+<span class="fstat-no" title="function not covered">function Namespace(name) {</span>
+<span class="cstat-no" title="statement not covered">  this.name   = name;</span>
   // changed in 2.7: no default context
-<span class="cstat-no" title="statement not covered" >  this.active = null;</span>
-<span class="cstat-no" title="statement not covered" >  this._set   = [];</span>
-<span class="cstat-no" title="statement not covered" >  this.id     = null;</span>
+<span class="cstat-no" title="statement not covered">  this.active = null;</span>
+<span class="cstat-no" title="statement not covered">  this._set   = [];</span>
+<span class="cstat-no" title="statement not covered">  this.id     = null;</span>
 }
 &nbsp;
-Namespace.prototype.set = <span class="fstat-no" title="function not covered" >function (key, value) {</span>
-<span class="cstat-no" title="statement not covered" >  if (!this.active) {</span>
-<span class="cstat-no" title="statement not covered" >    throw new Error("No context available. ns.run() or ns.bind() must be called first.");</span>
+Namespace.prototype.set = <span class="fstat-no" title="function not covered">function (key, value) {</span>
+<span class="cstat-no" title="statement not covered">  if (!this.active) {</span>
+<span class="cstat-no" title="statement not covered">    throw new Error("No context available. ns.run() or ns.bind() must be called first.");</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  this.active[key] = value;</span>
-<span class="cstat-no" title="statement not covered" >  return value;</span>
+<span class="cstat-no" title="statement not covered">  this.active[key] = value;</span>
+<span class="cstat-no" title="statement not covered">  return value;</span>
 };
 &nbsp;
-Namespace.prototype.get = <span class="fstat-no" title="function not covered" >function (key) {</span>
-<span class="cstat-no" title="statement not covered" >  if (!this.active) <span class="cstat-no" title="statement not covered" >return undefined;</span></span>
+Namespace.prototype.get = <span class="fstat-no" title="function not covered">function (key) {</span>
+<span class="cstat-no" title="statement not covered">  if (!this.active) <span class="cstat-no" title="statement not covered">return undefined;</span></span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return this.active[key];</span>
+<span class="cstat-no" title="statement not covered">  return this.active[key];</span>
 };
 &nbsp;
-Namespace.prototype.createContext = <span class="fstat-no" title="function not covered" >function () {</span>
-<span class="cstat-no" title="statement not covered" >  return Object.create(this.active);</span>
+Namespace.prototype.createContext = <span class="fstat-no" title="function not covered">function () {</span>
+<span class="cstat-no" title="statement not covered">  return Object.create(this.active);</span>
 };
 &nbsp;
-Namespace.prototype.run = <span class="fstat-no" title="function not covered" >function (fn) {</span>
-<span class="cstat-no" title="statement not covered" >  var context = this.createContext();</span>
-<span class="cstat-no" title="statement not covered" >  this.enter(context);</span>
-<span class="cstat-no" title="statement not covered" >  try {</span>
-<span class="cstat-no" title="statement not covered" >    fn(context);</span>
-<span class="cstat-no" title="statement not covered" >    return context;</span>
+Namespace.prototype.run = <span class="fstat-no" title="function not covered">function (fn) {</span>
+<span class="cstat-no" title="statement not covered">  var context = this.createContext();</span>
+<span class="cstat-no" title="statement not covered">  this.enter(context);</span>
+<span class="cstat-no" title="statement not covered">  try {</span>
+<span class="cstat-no" title="statement not covered">    fn(context);</span>
+<span class="cstat-no" title="statement not covered">    return context;</span>
   }
   catch (exception) {
-<span class="cstat-no" title="statement not covered" >    if (exception) {</span>
-<span class="cstat-no" title="statement not covered" >      exception[ERROR_SYMBOL] = context;</span>
+<span class="cstat-no" title="statement not covered">    if (exception) {</span>
+<span class="cstat-no" title="statement not covered">      exception[ERROR_SYMBOL] = context;</span>
     }
-<span class="cstat-no" title="statement not covered" >    throw exception;</span>
+<span class="cstat-no" title="statement not covered">    throw exception;</span>
   }
   finally {
-<span class="cstat-no" title="statement not covered" >    this.exit(context);</span>
+<span class="cstat-no" title="statement not covered">    this.exit(context);</span>
   }
 };
 &nbsp;
-Namespace.prototype.runAndReturn = <span class="fstat-no" title="function not covered" >function (fn) {</span>
-<span class="cstat-no" title="statement not covered" >  var value;</span>
-<span class="cstat-no" title="statement not covered" >  this.run(<span class="fstat-no" title="function not covered" >function (context) {</span></span>
-<span class="cstat-no" title="statement not covered" >    value = fn(context);</span>
+Namespace.prototype.runAndReturn = <span class="fstat-no" title="function not covered">function (fn) {</span>
+<span class="cstat-no" title="statement not covered">  var value;</span>
+<span class="cstat-no" title="statement not covered">  this.run(<span class="fstat-no" title="function not covered">function (context) {</span></span>
+<span class="cstat-no" title="statement not covered">    value = fn(context);</span>
   });
-<span class="cstat-no" title="statement not covered" >  return value;</span>
+<span class="cstat-no" title="statement not covered">  return value;</span>
 };
 &nbsp;
-Namespace.prototype.bind = <span class="fstat-no" title="function not covered" >function (fn, context) {</span>
-<span class="cstat-no" title="statement not covered" >  if (!context) {</span>
-<span class="cstat-no" title="statement not covered" >    if (!this.active) {</span>
-<span class="cstat-no" title="statement not covered" >      context = Object.create(this.active);</span>
+Namespace.prototype.bind = <span class="fstat-no" title="function not covered">function (fn, context) {</span>
+<span class="cstat-no" title="statement not covered">  if (!context) {</span>
+<span class="cstat-no" title="statement not covered">    if (!this.active) {</span>
+<span class="cstat-no" title="statement not covered">      context = Object.create(this.active);</span>
     }
     else {
-<span class="cstat-no" title="statement not covered" >      context = this.active;</span>
+<span class="cstat-no" title="statement not covered">      context = this.active;</span>
     }
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  var self = this;</span>
-<span class="cstat-no" title="statement not covered" >  return <span class="fstat-no" title="function not covered" >function () {</span></span>
-<span class="cstat-no" title="statement not covered" >    self.enter(context);</span>
-<span class="cstat-no" title="statement not covered" >    try {</span>
-<span class="cstat-no" title="statement not covered" >      return fn.apply(this, arguments);</span>
+<span class="cstat-no" title="statement not covered">  var self = this;</span>
+<span class="cstat-no" title="statement not covered">  return <span class="fstat-no" title="function not covered">function () {</span></span>
+<span class="cstat-no" title="statement not covered">    self.enter(context);</span>
+<span class="cstat-no" title="statement not covered">    try {</span>
+<span class="cstat-no" title="statement not covered">      return fn.apply(this, arguments);</span>
     }
     catch (exception) {
-<span class="cstat-no" title="statement not covered" >      if (exception) {</span>
-<span class="cstat-no" title="statement not covered" >        exception[ERROR_SYMBOL] = context;</span>
+<span class="cstat-no" title="statement not covered">      if (exception) {</span>
+<span class="cstat-no" title="statement not covered">        exception[ERROR_SYMBOL] = context;</span>
       }
-<span class="cstat-no" title="statement not covered" >      throw exception;</span>
+<span class="cstat-no" title="statement not covered">      throw exception;</span>
     }
     finally {
-<span class="cstat-no" title="statement not covered" >      self.exit(context);</span>
+<span class="cstat-no" title="statement not covered">      self.exit(context);</span>
     }
   };
 };
 &nbsp;
-Namespace.prototype.enter = <span class="fstat-no" title="function not covered" >function (context) {</span>
-<span class="cstat-no" title="statement not covered" >  assert.ok(context, "context must be provided for entering");</span>
+Namespace.prototype.enter = <span class="fstat-no" title="function not covered">function (context) {</span>
+<span class="cstat-no" title="statement not covered">  assert.ok(context, "context must be provided for entering");</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  this._set.push(this.active);</span>
-<span class="cstat-no" title="statement not covered" >  this.active = context;</span>
+<span class="cstat-no" title="statement not covered">  this._set.push(this.active);</span>
+<span class="cstat-no" title="statement not covered">  this.active = context;</span>
 };
 &nbsp;
-Namespace.prototype.exit = <span class="fstat-no" title="function not covered" >function (context) {</span>
-<span class="cstat-no" title="statement not covered" >  assert.ok(context, "context must be provided for exiting");</span>
+Namespace.prototype.exit = <span class="fstat-no" title="function not covered">function (context) {</span>
+<span class="cstat-no" title="statement not covered">  assert.ok(context, "context must be provided for exiting");</span>
 &nbsp;
   // Fast path for most exits that are at the top of the stack
-<span class="cstat-no" title="statement not covered" >  if (this.active === context) {</span>
-<span class="cstat-no" title="statement not covered" >    assert.ok(this._set.length, "can't remove top context");</span>
-<span class="cstat-no" title="statement not covered" >    this.active = this._set.pop();</span>
-<span class="cstat-no" title="statement not covered" >    return;</span>
+<span class="cstat-no" title="statement not covered">  if (this.active === context) {</span>
+<span class="cstat-no" title="statement not covered">    assert.ok(this._set.length, "can't remove top context");</span>
+<span class="cstat-no" title="statement not covered">    this.active = this._set.pop();</span>
+<span class="cstat-no" title="statement not covered">    return;</span>
   }
 &nbsp;
   // Fast search in the stack using lastIndexOf
-<span class="cstat-no" title="statement not covered" >  var index = this._set.lastIndexOf(context);</span>
+<span class="cstat-no" title="statement not covered">  var index = this._set.lastIndexOf(context);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  assert.ok(index &gt;= 0, "context not currently entered; can't exit");</span>
-<span class="cstat-no" title="statement not covered" >  assert.ok(index,      "can't remove top context");</span>
+<span class="cstat-no" title="statement not covered">  assert.ok(index &gt;= 0, "context not currently entered; can't exit");</span>
+<span class="cstat-no" title="statement not covered">  assert.ok(index,      "can't remove top context");</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  this._set.splice(index, 1);</span>
+<span class="cstat-no" title="statement not covered">  this._set.splice(index, 1);</span>
 };
 &nbsp;
-Namespace.prototype.bindEmitter = <span class="fstat-no" title="function not covered" >function (emitter) {</span>
-<span class="cstat-no" title="statement not covered" >  assert.ok(emitter.on &amp;&amp; emitter.addListener &amp;&amp; emitter.emit, "can only bind real EEs");</span>
+Namespace.prototype.bindEmitter = <span class="fstat-no" title="function not covered">function (emitter) {</span>
+<span class="cstat-no" title="statement not covered">  assert.ok(emitter.on &amp;&amp; emitter.addListener &amp;&amp; emitter.emit, "can only bind real EEs");</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  var namespace  = this;</span>
-<span class="cstat-no" title="statement not covered" >  var thisSymbol = 'context@' + this.name;</span>
+<span class="cstat-no" title="statement not covered">  var namespace  = this;</span>
+<span class="cstat-no" title="statement not covered">  var thisSymbol = 'context@' + this.name;</span>
 &nbsp;
   // Capture the context active at the time the emitter is bound.
-<span class="fstat-no" title="function not covered" >  function attach(listener) {</span>
-<span class="cstat-no" title="statement not covered" >    if (!listener) <span class="cstat-no" title="statement not covered" >return;</span></span>
-<span class="cstat-no" title="statement not covered" >    if (!listener[CONTEXTS_SYMBOL]) <span class="cstat-no" title="statement not covered" >listener[CONTEXTS_SYMBOL] = Object.create(null);</span></span>
+<span class="fstat-no" title="function not covered">  function attach(listener) {</span>
+<span class="cstat-no" title="statement not covered">    if (!listener) <span class="cstat-no" title="statement not covered">return;</span></span>
+<span class="cstat-no" title="statement not covered">    if (!listener[CONTEXTS_SYMBOL]) <span class="cstat-no" title="statement not covered">listener[CONTEXTS_SYMBOL] = Object.create(null);</span></span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    listener[CONTEXTS_SYMBOL][thisSymbol] = {</span>
+<span class="cstat-no" title="statement not covered">    listener[CONTEXTS_SYMBOL][thisSymbol] = {</span>
       namespace : namespace,
       context   : namespace.active
     };
   }
 &nbsp;
   // At emit time, bind the listener within the correct context.
-<span class="fstat-no" title="function not covered" >  function bind(unwrapped) {</span>
-<span class="cstat-no" title="statement not covered" >    if (!(unwrapped &amp;&amp; unwrapped[CONTEXTS_SYMBOL])) <span class="cstat-no" title="statement not covered" >return unwrapped;</span></span>
+<span class="fstat-no" title="function not covered">  function bind(unwrapped) {</span>
+<span class="cstat-no" title="statement not covered">    if (!(unwrapped &amp;&amp; unwrapped[CONTEXTS_SYMBOL])) <span class="cstat-no" title="statement not covered">return unwrapped;</span></span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    var wrapped  = unwrapped;</span>
-<span class="cstat-no" title="statement not covered" >    var contexts = unwrapped[CONTEXTS_SYMBOL];</span>
-<span class="cstat-no" title="statement not covered" >    Object.keys(contexts).forEach(<span class="fstat-no" title="function not covered" >function (name) {</span></span>
-<span class="cstat-no" title="statement not covered" >      var thunk = contexts[name];</span>
-<span class="cstat-no" title="statement not covered" >      wrapped = thunk.namespace.bind(wrapped, thunk.context);</span>
+<span class="cstat-no" title="statement not covered">    var wrapped  = unwrapped;</span>
+<span class="cstat-no" title="statement not covered">    var contexts = unwrapped[CONTEXTS_SYMBOL];</span>
+<span class="cstat-no" title="statement not covered">    Object.keys(contexts).forEach(<span class="fstat-no" title="function not covered">function (name) {</span></span>
+<span class="cstat-no" title="statement not covered">      var thunk = contexts[name];</span>
+<span class="cstat-no" title="statement not covered">      wrapped = thunk.namespace.bind(wrapped, thunk.context);</span>
     });
-<span class="cstat-no" title="statement not covered" >    return wrapped;</span>
+<span class="cstat-no" title="statement not covered">    return wrapped;</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  wrapEmitter(emitter, attach, bind);</span>
+<span class="cstat-no" title="statement not covered">  wrapEmitter(emitter, attach, bind);</span>
 };
 &nbsp;
 /**
@@ -802,49 +800,49 @@ Namespace.prototype.bindEmitter = <span class="fstat-no" title="function not cov
  *
  * @param {Error} exception Possibly annotated error.
  */
-Namespace.prototype.fromException = <span class="fstat-no" title="function not covered" >function (exception) {</span>
-<span class="cstat-no" title="statement not covered" >  return exception[ERROR_SYMBOL];</span>
+Namespace.prototype.fromException = <span class="fstat-no" title="function not covered">function (exception) {</span>
+<span class="cstat-no" title="statement not covered">  return exception[ERROR_SYMBOL];</span>
 };
 &nbsp;
-<span class="fstat-no" title="function not covered" >function get(name) {</span>
-<span class="cstat-no" title="statement not covered" >  return process.namespaces[name];</span>
+<span class="fstat-no" title="function not covered">function get(name) {</span>
+<span class="cstat-no" title="statement not covered">  return process.namespaces[name];</span>
 }
 &nbsp;
-<span class="fstat-no" title="function not covered" >function create(name) {</span>
-<span class="cstat-no" title="statement not covered" >  assert.ok(name, "namespace must be given a name!");</span>
+<span class="fstat-no" title="function not covered">function create(name) {</span>
+<span class="cstat-no" title="statement not covered">  assert.ok(name, "namespace must be given a name!");</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  var namespace = new Namespace(name);</span>
-<span class="cstat-no" title="statement not covered" >  namespace.id = process.addAsyncListener({</span>
-    create : <span class="fstat-no" title="function not covered" >function () {</span> <span class="cstat-no" title="statement not covered" >return namespace.active; </span>},
-    before : <span class="fstat-no" title="function not covered" >function (context, storage) {</span> <span class="cstat-no" title="statement not covered" >if (storage) <span class="cstat-no" title="statement not covered" >namespace.enter(storage); </span></span>},
-    after  : <span class="fstat-no" title="function not covered" >function (context, storage) {</span> <span class="cstat-no" title="statement not covered" >if (storage) <span class="cstat-no" title="statement not covered" >namespace.exit(storage); </span></span>},
-    error  : <span class="fstat-no" title="function not covered" >function (storage) {</span> <span class="cstat-no" title="statement not covered" >if (storage) <span class="cstat-no" title="statement not covered" >namespace.exit(storage); </span></span>}
+<span class="cstat-no" title="statement not covered">  var namespace = new Namespace(name);</span>
+<span class="cstat-no" title="statement not covered">  namespace.id = process.addAsyncListener({</span>
+    create : <span class="fstat-no" title="function not covered">function () {</span> <span class="cstat-no" title="statement not covered">return namespace.active; </span>},
+    before : <span class="fstat-no" title="function not covered">function (context, storage) {</span> <span class="cstat-no" title="statement not covered">if (storage) <span class="cstat-no" title="statement not covered">namespace.enter(storage); </span></span>},
+    after  : <span class="fstat-no" title="function not covered">function (context, storage) {</span> <span class="cstat-no" title="statement not covered">if (storage) <span class="cstat-no" title="statement not covered">namespace.exit(storage); </span></span>},
+    error  : <span class="fstat-no" title="function not covered">function (storage) {</span> <span class="cstat-no" title="statement not covered">if (storage) <span class="cstat-no" title="statement not covered">namespace.exit(storage); </span></span>}
   });
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  process.namespaces[name] = namespace;</span>
-<span class="cstat-no" title="statement not covered" >  return namespace;</span>
+<span class="cstat-no" title="statement not covered">  process.namespaces[name] = namespace;</span>
+<span class="cstat-no" title="statement not covered">  return namespace;</span>
 }
 &nbsp;
-<span class="fstat-no" title="function not covered" >function destroy(name) {</span>
-<span class="cstat-no" title="statement not covered" >  var namespace = get(name);</span>
+<span class="fstat-no" title="function not covered">function destroy(name) {</span>
+<span class="cstat-no" title="statement not covered">  var namespace = get(name);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  assert.ok(namespace,    "can't delete nonexistent namespace!");</span>
-<span class="cstat-no" title="statement not covered" >  assert.ok(namespace.id, "don't assign to process.namespaces directly!");</span>
+<span class="cstat-no" title="statement not covered">  assert.ok(namespace,    "can't delete nonexistent namespace!");</span>
+<span class="cstat-no" title="statement not covered">  assert.ok(namespace.id, "don't assign to process.namespaces directly!");</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  process.removeAsyncListener(namespace.id);</span>
-<span class="cstat-no" title="statement not covered" >  process.namespaces[name] = null;</span>
+<span class="cstat-no" title="statement not covered">  process.removeAsyncListener(namespace.id);</span>
+<span class="cstat-no" title="statement not covered">  process.namespaces[name] = null;</span>
 }
 &nbsp;
 function reset() {
   // must unregister async listeners
-  <span class="missing-if-branch" title="if path not taken" >I</span>if (process.namespaces) {
-<span class="cstat-no" title="statement not covered" >    Object.keys(process.namespaces).forEach(<span class="fstat-no" title="function not covered" >function (name) {</span></span>
-<span class="cstat-no" title="statement not covered" >      destroy(name);</span>
+  <span class="missing-if-branch" title="if path not taken">I</span>if (process.namespaces) {
+<span class="cstat-no" title="statement not covered">    Object.keys(process.namespaces).forEach(<span class="fstat-no" title="function not covered">function (name) {</span></span>
+<span class="cstat-no" title="statement not covered">      destroy(name);</span>
     });
   }
   process.namespaces = Object.create(null);
 }
-<span class="missing-if-branch" title="else path not taken" >E</span>if (!process.namespaces) reset(); // call immediately to set up
+<span class="missing-if-branch" title="else path not taken">E</span>if (!process.namespaces) reset(); // call immediately to set up
 &nbsp;
 module.exports = {
   getNamespace     : get,
@@ -854,10 +852,11 @@ module.exports = {
 };
 &nbsp;
 &nbsp;</pre></td></tr>
-</table></pre>
+</tbody></table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Wed Apr 12 2017 00:39:23 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 18 2017 19:26:31 GMT+0000 (UTC)</div>
 </div>
-</body>
-</html>
+
+
+</body></html>

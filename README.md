@@ -1,7 +1,10 @@
-# test coverage for  [continuation-local-storage (v3.2.0)](https://github.com/othiym23/node-continuation-local-storage#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-continuation-local-storage.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-continuation-local-storage) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-continuation-local-storage.svg)](https://travis-ci.org/npmtest/node-npmtest-continuation-local-storage)
+# npmtest-continuation-local-storage
+
+#### test coverage for  [continuation-local-storage (v3.2.0)](https://github.com/othiym23/node-continuation-local-storage#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-continuation-local-storage.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-continuation-local-storage) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-continuation-local-storage.svg)](https://travis-ci.org/npmtest/node-npmtest-continuation-local-storage)
+
 #### userland implementation of https://github.com/joyent/node/issues/5243
 
-[![NPM](https://nodei.co/npm/continuation-local-storage.png?downloads=true)](https://www.npmjs.com/package/continuation-local-storage)
+[![NPM](https://nodei.co/npm/continuation-local-storage.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/continuation-local-storage)
 
 | git-branch : | [alpha](https://github.com/npmtest/node-npmtest-continuation-local-storage/tree/alpha)|
 |--:|:--|
@@ -9,11 +12,17 @@
 | test-report : | [![test-report](https://npmtest.github.io/node-npmtest-continuation-local-storage/build/test-report.badge.svg)](https://npmtest.github.io/node-npmtest-continuation-local-storage/build/test-report.html)|
 | build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-continuation-local-storage/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-continuation-local-storage/tree/gh-pages/build)|
 
-[![istanbul-coverage](https://npmtest.github.io/node-npmtest-continuation-local-storage/build/screenCapture.buildCustomOrg.browser.coverage.html.png)](https://npmtest.github.io/node-npmtest-continuation-local-storage/build/coverage.html/index.html)
+- [https://npmtest.github.io/node-npmtest-continuation-local-storage/build/coverage.html/index.html](https://npmtest.github.io/node-npmtest-continuation-local-storage/build/coverage.html/index.html)
 
-[![test-report](https://npmtest.github.io/node-npmtest-continuation-local-storage/build/screenCapture.buildCustomOrg.browser.%252Fhome%252Ftravis%252Fbuild%252Fnpmtest%252Fnode-npmtest-continuation-local-storage%252Ftmp%252Fbuild%252Ftest-report.html.png)](https://npmtest.github.io/node-npmtest-continuation-local-storage/build/test-report.html)
+[![istanbul-coverage](https://npmtest.github.io/node-npmtest-continuation-local-storage/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fcoverage.lib.html.png)](https://npmtest.github.io/node-npmtest-continuation-local-storage/build/coverage.html/index.html)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-continuation-local-storage/build/screenCapture.buildApidoc.browser.%252Fhome%252Ftravis%252Fbuild%252Fnpmdoc%252Fnode-npmdoc-continuation-local-storage%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-continuation-local-storage/build/apidoc.html)
+- [https://npmtest.github.io/node-npmtest-continuation-local-storage/build/test-report.html](https://npmtest.github.io/node-npmtest-continuation-local-storage/build/test-report.html)
+
+[![test-report](https://npmtest.github.io/node-npmtest-continuation-local-storage/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Ftest-report.html.png)](https://npmtest.github.io/node-npmtest-continuation-local-storage/build/test-report.html)
+
+- [https://npmdoc.github.io/node-npmdoc-continuation-local-storage/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-continuation-local-storage/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-continuation-local-storage/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-continuation-local-storage/build/apidoc.html)
 
 ![npmPackageListing](https://npmtest.github.io/node-npmtest-continuation-local-storage/build/screenCapture.npmPackageListing.svg)
 
@@ -27,20 +36,17 @@
 
 {
     "author": {
-        "name": "Forrest L Norvell",
-        "email": "ogd@aoaioxxysz.net"
+        "name": "Forrest L Norvell"
     },
     "bugs": {
         "url": "https://github.com/othiym23/node-continuation-local-storage/issues"
     },
     "contributors": [
         {
-            "name": "Tim Caswell",
-            "email": "tim@creationix.com"
+            "name": "Tim Caswell"
         },
         {
-            "name": "Forrest L Norvell",
-            "email": "ogd@aoaioxxysz.net"
+            "name": "Forrest L Norvell"
         }
     ],
     "dependencies": {
@@ -72,17 +78,14 @@
     "main": "context.js",
     "maintainers": [
         {
-            "name": "othiym23",
-            "email": "ogd@aoaioxxysz.net"
+            "name": "othiym23"
         },
         {
-            "name": "qard",
-            "email": "admin@stephenbelanger.com"
+            "name": "qard"
         }
     ],
     "name": "continuation-local-storage",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/othiym23/node-continuation-local-storage.git"
